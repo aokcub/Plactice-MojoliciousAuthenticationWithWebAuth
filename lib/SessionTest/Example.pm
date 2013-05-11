@@ -1,7 +1,6 @@
 package SessionTest::Example;
 use Mojo::Base 'Mojolicious::Controller';
 
-# This action will render a template
 sub welcome {
     my $self = shift;
 
