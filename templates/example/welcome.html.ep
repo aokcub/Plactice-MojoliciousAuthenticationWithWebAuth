@@ -1,0 +1,6 @@
+% layout 'default';
+% title 'Welcome';
+
+Welcome <%= $user_name %> (<%= $user_screen_name %> : <%= $user_id %>)<br>
+<a href="/auth/logout">LOGOUT</a>
+

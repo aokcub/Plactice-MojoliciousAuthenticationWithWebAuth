@@ -1,0 +1,11 @@
+% layout 'default';
+% title 'LOGIN';
+
+<p>
+    SessionTest Login
+</p>
+
+<form method="POST" action="/auth/login">
+    <button type="submit">login</button>
+</form>
+
