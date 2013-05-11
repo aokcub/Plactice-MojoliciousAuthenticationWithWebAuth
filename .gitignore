@@ -19,4 +19,3 @@ carton.lock
 local/
 log/
 conf/config.conf
-file/*
