@@ -4,10 +4,6 @@ use Mojo::Base 'Mojolicious::Controller';
 sub welcome {
     my $self = shift;
 
-    unless ( $self->session('verified') ) {
-        $self->redirect_to('/auth/login');
-    }
-
     $self->stash(
         user_id => $self->session('user_id'));
     $self->stash(
