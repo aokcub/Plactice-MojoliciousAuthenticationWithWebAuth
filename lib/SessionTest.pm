@@ -3,7 +3,6 @@ use Mojo::Base 'Mojolicious';
 use Plack::Session::Store::File;
 use Mojolicious::Sessions::Storable;
 
-# This method will run once at server start
 sub startup {
     my $self = shift;
 
@@ -37,6 +36,7 @@ sub startup {
             # update session id
             $c->session_options->{change_id}++;
 
+            # set params. to session
             $c->session( 'user_id'   => $ref->{id} );
             $c->session( 'user_name' => $ref->{name} );
             $c->session( 'user_screen_name' => $ref->{screen_name} );

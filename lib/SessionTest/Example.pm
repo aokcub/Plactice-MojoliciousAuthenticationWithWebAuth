@@ -1,13 +1,8 @@
 package SessionTest::Example;
 use Mojo::Base 'Mojolicious::Controller';
 
-# This action will render a template
 sub welcome {
     my $self = shift;
-
-    unless ( $self->session('verified') ) {
-        $self->redirect_to('/auth/login');
-    }
 
     $self->stash(
         user_id => $self->session('user_id'));
